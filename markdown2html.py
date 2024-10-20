@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 File takes two arguments
-script converts markdown into html file
+This script converts markdown into html file
 """
 import sys
 import os
