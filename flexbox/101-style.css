@@ -1,62 +1,61 @@
 :root {
-  --font-size: 4rem;
+  --font-size: 4rem; /* Root variable for font size */
 }
 
-/* Apply Flexbox to the container */
+/* Container for all the boxes, applying flexbox layout */
 .container {
-  display: flex;
-  flex-wrap: wrap; /* Ensure the boxes wrap onto new lines */
-  justify-content: space-between; /* Distribute boxes with space between them */
-  align-items: stretch; /* Stretch the items to be of equal height */
-  width: 100%; /* Ensure the container takes the full width */
-  height: 100vh; /* Full height of the viewport */
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center the items horizontally */
+  align-items: baseline; /* Align the items to the baseline */
+  width: 1300px; /* Set fixed width for the container */
+  height: 200px; /* Set fixed height for the container */
 }
 
-/* Define the base properties for all boxes */
+/* General styling for all boxes */
 .box {
-  display: flex; /* Enable flexbox inside the box */
-  justify-content: center; /* Center the text horizontally inside each box */
-  align-items: center; /* Center the text vertically inside each box */
-  text-align: center; /* Center text inside boxes */
-  font-size: calc(var(--font-size)); /* Font size based on the --font-size variable */
+  display: flex; /* Use flexbox inside each box */
   color: white; /* Set text color to white */
-  font-weight: bold; /* Make the text bold */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 
-/* Box 1 - Aqua */
-.box1 {
-  background-color: aqua;
-  font-size: calc(var(--font-size) * 0.7); /* Smaller font size for box 1 */
-  width: 18%; /* Box 1 width */
-  height: 20%; /* Box 1 height */
+/* Box 1 - Aqua background with smaller font size */
+.box1, .box5 {
+  font-size: calc(var(--font-size) * 0.7); /* Smaller font size */
+  width: 10%; /* Box 1 width */
+  height: 43%; /* Box 1 height */
+  background-color: aqua; /* Aqua background */
 }
 
-/* Box 2 - Rebeccapurple */
+/* Box 2 - Rebeccapurple background with regular font size */
 .box2 {
-  background-color: rebeccapurple;
-  width: 18%; /* Box 2 width */
-  height: 20%; /* Box 2 height */
+  font-size: calc(var(--font-size)); /* Regular font size */
+  width: 16%; /* Box 2 width */
+  height: 60%; /* Box 2 height */
+  background-color: rebeccapurple; /* Rebeccapurple background */
 }
 
-/* Box 3 - Yellow */
+/* Box 3 - Yellow background with larger font size */
 .box3 {
-  background-color: yellow;
-  font-size: calc(var(--font-size) * 2); /* Larger font size for box 3 */
+  font-size: calc(var(--font-size) * 2); /* Larger font size */
   width: 30%; /* Box 3 width */
   height: 100%; /* Box 3 height */
+  background-color: yellow; /* Yellow background */
 }
 
-/* Box 4 - Red */
+/* Box 4 - Red background with regular font size */
 .box4 {
-  background-color: red;
-  width: 18%; /* Box 4 width */
-  height: 20%; /* Box 4 height */
+  background-color: red; /* Red background */
+  width: 16%; /* Box 4 width */
+  height: 60%; /* Box 4 height */
 }
 
-/* Box 5 - Royalblue */
+/* Box 5 - Royalblue background with smaller font size */
 .box5 {
-  background-color: royalblue;
-  font-size: calc(var(--font-size) * 0.7); /* Smaller font size for box 5 */
-  width: 18%; /* Box 5 width */
-  height: 20%; /* Box 5 height */
+  background-color: royalblue; /* Royalblue background */
+  font-size: calc(var(--font-size) * 0.7); /* Smaller font size */
+  width: 10%; /* Box 5 width */
+  height: 43%; /* Box 5 height */
 }
+
