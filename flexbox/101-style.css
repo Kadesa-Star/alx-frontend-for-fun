@@ -1,0 +1,43 @@
+/* Apply Flexbox to the container */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure the boxes wrap onto new lines */
+  justify-content: space-between; /* Distribute boxes with space between them */
+  align-items: stretch; /* Stretch the items to be of equal height */
+  width: 100%; /* Ensure the container takes the full width */
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Define the base properties for all boxes */
+.box {
+  display: flex; /* Enable flexbox inside the box */
+  justify-content: center; /* Center the text horizontally inside each box */
+  align-items: center; /* Center the text vertically inside each box */
+  flex-basis: 18%; /* Give each box an equal width */
+  height: 20%; /* Set the height for the boxes */
+  text-align: center; /* Center text inside boxes */
+  font-size: 1.5rem; /* Font size for text inside the box */
+  color: white; /* Set text color to white */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Custom colors for each box */
+.box1 {
+  background-color: #3498db; /* Blue */
+}
+
+.box2 {
+  background-color: #e74c3c; /* Red */
+}
+
+.box3 {
+  background-color: #2ecc71; /* Green */
+}
+
+.box4 {
+  background-color: #f39c12; /* Yellow */
+}
+
+.box5 {
+  background-color: #8e44ad; /* Purple */
+}
