@@ -509,8 +509,10 @@
     z-index: -1;
   }
   /*** ARTICLE PAGE ***/
-  /* Section HERO (article) ========================== */
- .hero-article {
+  /* Section HERO (article)
+         ========================== */
+ 
+.hero-article {
     background-size: 150rem 100rem;
     background-position: 50% 0;
  }
