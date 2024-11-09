@@ -1,3 +1,7 @@
+:root {
+  --font-size: 4rem;
+}
+
 /* Apply Flexbox to the container */
 .container {
   display: flex;
@@ -13,31 +17,46 @@
   display: flex; /* Enable flexbox inside the box */
   justify-content: center; /* Center the text horizontally inside each box */
   align-items: center; /* Center the text vertically inside each box */
-  flex-basis: 18%; /* Give each box an equal width */
-  height: 20%; /* Set the height for the boxes */
   text-align: center; /* Center text inside boxes */
-  font-size: 1.5rem; /* Font size for text inside the box */
+  font-size: calc(var(--font-size)); /* Font size based on the --font-size variable */
   color: white; /* Set text color to white */
   font-weight: bold; /* Make the text bold */
 }
 
-/* Custom colors for each box */
+/* Box 1 - Aqua */
 .box1 {
-  background-color: #3498db; /* Blue */
+  background-color: aqua;
+  font-size: calc(var(--font-size) * 0.7); /* Smaller font size for box 1 */
+  width: 18%; /* Box 1 width */
+  height: 20%; /* Box 1 height */
 }
 
+/* Box 2 - Rebeccapurple */
 .box2 {
-  background-color: #e74c3c; /* Red */
+  background-color: rebeccapurple;
+  width: 18%; /* Box 2 width */
+  height: 20%; /* Box 2 height */
 }
 
+/* Box 3 - Yellow */
 .box3 {
-  background-color: #2ecc71; /* Green */
+  background-color: yellow;
+  font-size: calc(var(--font-size) * 2); /* Larger font size for box 3 */
+  width: 30%; /* Box 3 width */
+  height: 100%; /* Box 3 height */
 }
 
+/* Box 4 - Red */
 .box4 {
-  background-color: #f39c12; /* Yellow */
+  background-color: red;
+  width: 18%; /* Box 4 width */
+  height: 20%; /* Box 4 height */
 }
 
+/* Box 5 - Royalblue */
 .box5 {
-  background-color: #8e44ad; /* Purple */
+  background-color: royalblue;
+  font-size: calc(var(--font-size) * 0.7); /* Smaller font size for box 5 */
+  width: 18%; /* Box 5 width */
+  height: 20%; /* Box 5 height */
 }
