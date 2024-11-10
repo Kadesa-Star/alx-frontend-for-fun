@@ -677,7 +677,7 @@ fieldset {
   justify-content: flex-start;
   border: none;
   padding: 0 0 2rem;
- }
+}
 
 label {
   cursor: pointer;
@@ -685,29 +685,28 @@ label {
   white-space: nowrap;
   font-size: 1.4rem;
   padding: 0 0 .5rem;
-  }
- 
+}
+
 input[type="text"], input[type="email"], textarea {
-   position: relative;
-   width: 100%;
-   padding: 1.2rem;
-   line-height: 1;
-   border: .1rem solid var(--color-black);
-   background-color: var(--color-white);
-   box-shadow: none;
-   outline: 0;
-  }
- 
+  position: relative;
+  width: 100%;
+  padding: 1.2rem;
+  line-height: 1;
+  border: .1rem solid var(--color-black);
+  background-color: var(--color-white);
+  box-shadow: none;
+  outline: 0;
+}
+
 input[type="text"], input[type="email"] {
-   padding-right: 3rem;
- }
+  padding-right: 3rem;
+}
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-   border: .1rem solid var(--color-grey);
- }
+  border: .1rem solid var(--color-grey);
+}
 
 ::placeholder {
   font-style: italic;
   font-size: var(--font-size-small);
 }
-
