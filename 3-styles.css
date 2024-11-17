@@ -1,0 +1,124 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+/* Hide the checkbox */
+.menu-open {
+    display: none;
+}
+
+/* Center the menu button */
+.menu-open-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-open-button .menu-line {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Rotate the button when clicked */
+.menu-open:checked + .menu-open-button {
+    transform: rotate(135deg);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    opacity: 0;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Menu items */
+.menu-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    color: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: -1; /* Hide behind the menu button */
+}
+
+.menu-item i {
+    font-size: 24px;
+}
+
+/* Position the menu items in a circular pattern */
+.menu-item:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(0deg) translate(100px) rotate(0deg);
+}
+.menu-item:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(72deg) translate(100px) rotate(-72deg);
+}
+.menu-item:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(144deg) translate(100px) rotate(-144deg);
+}
+.menu-item:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(216deg) translate(100px) rotate(-216deg);
+}
+.menu-item:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(288deg) translate(100px) rotate(-288deg);
+}
+
+/* Animate the menu items when the menu is opened */
+.menu-open:checked ~ .menu-item {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1; /* Bring to the front */
+}
+
+.menu-open:checked ~ .menu-item:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
