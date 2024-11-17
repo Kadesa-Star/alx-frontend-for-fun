@@ -1,0 +1,49 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+a {
+    text-decoration: none; /* Remove default underline */
+    color: #007bff; /* Link color */
+    position: relative; /* Position for pseudo-elements */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a::after {
+    content: ''; /* Empty content for the underline */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the link text */
+    left: 0;
+    width: 0; /* Hidden by default */
+    height: 2px; /* Thickness of the underline */
+    background-color: #007bff; /* Match the link color */
+    transition: width 0.5s ease; /* Smooth underline appearance */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
