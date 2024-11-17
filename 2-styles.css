@@ -1,0 +1,79 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the toggle */
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the native checkbox */
+.toggle-cb {
+    display: none;
+}
+
+/* Style the label */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+/* Inner track inside the toggle */
+.toggle-inner {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Switch handle */
+.toggle-switch {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+}
+
+/* When the checkbox is checked */
+.toggle-cb:checked + .toggle-label {
+    background-color: #4caf50;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+    left: 65%; /* Move the switch handle to the right */
+}
