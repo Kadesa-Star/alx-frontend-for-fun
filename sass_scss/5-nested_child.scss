@@ -1,0 +1,8 @@
+/* Task 5: Assign text colors using nested declarations with first child selector */
+body {
+  color: #3D3D3D;
+
+  > .red {
+    color: #FF0000;
+  }
+}
