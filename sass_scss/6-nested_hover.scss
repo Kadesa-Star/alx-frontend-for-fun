@@ -1,8 +1,8 @@
-/* Task 6: Assign text colors to button tags and apply hover effect */
+/* File that assigns text color `#FF0000` to `button` tags and when the user hovers over `button` tags, text color should change to `#00FF00` using nested declarations. */
 button {
-  color: #FF0000;
-}
+  color: #ff0000;
 
-button:hover {
-  color: #00FF00;
+  &:hover {
+    color: #00ff00;
+  }
 }
