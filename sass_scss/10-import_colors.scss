@@ -1,0 +1,15 @@
+/* Import the color variables */
+@import '10-colors';
+
+/* Use the imported colors */
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}
