@@ -1,0 +1,16 @@
+/* Base class .info */
+.info {
+  font-size: 12px;
+}
+
+/* .success extends .info and adds a specific color */
+.success {
+  @extend .info;
+  color: #00FF00;
+}
+
+/* .warning extends .info and adds a different color */
+.warning {
+  @extend .info;
+  color: #FF0000;
+}
