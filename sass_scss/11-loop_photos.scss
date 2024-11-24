@@ -1,5 +1,4 @@
-/* All names */
-$list-names: julien john sam damian;
+@import '11-photos';
 
 /* Loop over each name and create a class with the background image */
 @each $name in $list-names {
